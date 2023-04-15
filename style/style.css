@@ -1,0 +1,9 @@
+.form{
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+.container__text{
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 1em;
+}
