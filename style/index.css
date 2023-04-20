@@ -1,0 +1,28 @@
+.banner__pesquisa__input , .contato__email{
+    border: 1px solid #000000;
+    border-radius: 24px;
+    padding: 1em;
+    border-radius: 24px;
+}
+.banner__pesquisa__input::placeholder , .contato__email::placeholder{
+    text-align: center;
+    background-position: 0.5em;
+}
+.container__imagem--compras{
+    display: none;
+}
+.container__imagem--favoritos{
+    display:none;
+}
+.botoes__item , botoes{
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .container__imagem--compras{
+        display: block;
+    }
+    .container__imagem--favoritos{
+        display:block;
+    }
+}
