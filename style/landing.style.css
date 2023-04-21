@@ -1,0 +1,131 @@
+:root {
+    --primary: #f5edd3;
+    --secondary: #7A5220;
+    --text-color: #000;
+    --text-color-secondary: #ffffff;
+
+}
+
+* {
+  font-family: "ROBOTO";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+body{
+  padding-bottom: 500px;
+}
+
+#description {
+  height: 400px;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+  url("../img/Gionna\,\ realist.png");
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--text-color-secondary);
+}
+#BEM-VINDO h1{
+  color:var(--text-color-secondary)
+}
+#BEM-VINDO h1{
+  font-size: 3em;
+  margin-bottom:1em;
+  max-width: 700px;
+}
+#subscription-form{
+  background-color:var(--text-color);
+  padding: 2em;
+  max-width: 22%;
+}
+#subscription-form{
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8em;
+}
+.form-group label{
+  color: var(--text-color-secondary);
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+.form-group input,
+.form-group select{
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.btn{
+  background-color: var(--primary);
+  color: var(--text-color);
+  text-transform:uppercase ;
+  width: 100%;
+  padding:12px;
+  margin-top: 5%;
+  border:none;
+  padding: 12px ;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.btn:hover {
+  opacity:1 ;
+}
+#QUEM-SOMOS h2{
+  display: flex;
+  background-color: #f5edd3;
+  text-align: center;
+  font-size: 2.0em;
+  padding: 2em ;
+  font-weight: 700;
+  align-items:center;
+  justify-content: space-between;
+  gap: 5%;
+  margin-bottom: 4em;
+}
+
+.QUEM-SOMOS img{
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5%;
+  margin-bottom: 4em;
+}
+
+#RAZAO h3{
+  display: flex;
+  background-color: #f5edd3;
+  text-align: center;
+  font-size: 2.0em;
+  padding: 2em;
+  font-weight: 700;
+  align-items: center;
+  justify-content:space-between;
+  gap: 5%;
+  margin-bottom: 4em;
+}
+.RAZAO img{
+  display: flex;
+  align-items: flex-start;
+  justify-content:space-between;
+  gap: 5%;
+  margin-bottom: 4em;
+}
+
+img{
+  width: 45%;
+}
+
+#textos{
+  background-color: #f5edd3;
+}
+
