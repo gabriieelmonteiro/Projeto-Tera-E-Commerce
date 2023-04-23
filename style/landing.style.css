@@ -14,9 +14,6 @@
  
 }
 
-body{
-  padding-bottom: 500px;
-}
 
 #description {
   height: 400px;
@@ -111,7 +108,7 @@ body{
   align-items: center;
   justify-content:space-between;
   gap: 5%;
-  margin-bottom: 4em;
+  margin-bottom: 0em;
 }
 .RAZAO img{
   display: flex;
@@ -128,4 +125,79 @@ img{
 #textos{
   background-color: #f5edd3;
 }
+#footer{
+  margin-top: 0%;
+}
 
+#rodape{
+  background-color: #292827;
+  text-align: center;
+  color:var(--primary);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#rodape h3{
+  font-size: 1.8em;
+  margin-bottom: 1em;
+
+}
+#rodape p:nth-child(2) {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+#rodape span{
+  font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width:450px) {
+
+  #description {
+    flex-direction: column;
+    height: auto;
+  }
+  #BEM-VINDO {
+
+    padding: 2em;
+
+  }
+  #BEM-VINDO h1{
+    font-size: medium;
+    margin-bottom: 0.5em;
+  }
+  #subscription-form{
+    max-width: 70%;
+    margin-bottom: 2em;
+  }
+  #QUEM-SOMOS{
+    padding: 2em;
+  }
+  #QUEM-SOMOS h2{
+    font-size: medium;
+    margin-bottom: 0.5em;
+    flex-direction: column;
+
+  }
+  
+ #QUEM-SOMOS img{
+  width: 100%;
+  margin: 2em 0;
+
+}
+#RAZAO{
+  padding: 2em;
+
+}
+#RAZAO h3{
+  font-size: medium;
+  margin-bottom: 0.5em;
+  flex-direction: column;
+
+}
+#RAZAO img{
+  width: 100%;
+  margin: 2em 0;
+}
+}
