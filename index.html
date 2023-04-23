@@ -14,7 +14,7 @@
   <!-- Seção Header barra de navegação -->
     <header class="mb-3">
     <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-between">
-        <div class="container-fluid ">
+        <div class="container-fluid d-flex flex-row justify-content-between ">
         
           <a class="navbar-brand" href="#">GAGF</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,35 +25,44 @@
             <div class="container-fluid px-3">
             <ul class="navbar-nav px-3 me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Login</a>
+                <a class="nav-link active" aria-current="page" href="login.html">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Cadastre-se</a>
+                <a class="nav-link active" href="cadastro.html">Cadastre-se</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Categoria
+                  Categorias
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Ilustração Digital</a></li>
+                  <li><a class="dropdown-item" href="#">Animações 3D</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Pintura e Gravura digital</a></li>
                 </ul>
+                <li class="nav-item">
+                  <a class="nav-link active" href="landingPage.html">Quem somos</a>
+                </li>
               </li>
             </ul>
             </div>
             </div>
-            <div class="container-fluid collapse navbar-collapse d-flex justify-content-end " id="navbarSupportedContent">
+            <div class="container d-flex flex-row justify-content-end">
                 <a href="#"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem--favoritos">
                 </a>
                 <a href="#" class="container__link">
                     <img src="img/Compras.svg" alt="Minha sacola" class="container__imagem container__imagem--compras">
                 </a>
-                <a href="#" class="container__link perfil__toggle">
-                    <img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem">
-                </a>
-            </div>
+                <div class="dropdown container container__imagem__perfil">
+                <button class="btn dropdown-toggle classcontain container__imagem__perfil d-flex flex-row" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem container__imagem__perfil">
+                    <ul class="dropdown-menu container__imagem__perfil">
+                      <li><a class="dropdown-item" href="#">Perfil</a></li>
+                      <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                      <li><a class="dropdown-item" href="#">Minhas coleções</a></li>
+                    </ul>
+                  </div>
+                
         </div>
       </nav>
     </header>
@@ -206,21 +215,23 @@
     </section>
 
     <!-- seção card propaganda -->
-    <section class="card text-center">
-      <div class=" row card__descricao mx-4">
-        <div class="descricao">
-            <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
-            <ul class="botoes d-flex flex-row">
-              <li class="botoes__item"><img src="img/Favoritos.svg" alt="favoritos"></li>
-              <li class="botoes__item"><img src="img/Compras.svg" alt=""></li>
-          </ul>
+    <section class="container w-80">
+    <div class="card__propaganda container w-70">
+      <div class="card__descricao d-flex justify-content-between ">
+          <div class="descricao">
+              <h3 class="descricao__texto">Talvez você se interesse por... </h3>
+              <p class="descricao__titulo-livro">Obra comtemporanea inspirada em Michelangelo feita atráves da DALL.E 2</p>
           </div>
-          </div>
-      <div>
-        <img src="img/DALL·E 2023-04-19 21.06.53 - A photo of a teddy bear on a skateboard in Times Square.png" alt="" width="60px" height="40px">
+          <img src="img/DALL·E 2023-04-23 19.19.58 - A photo of Michelangelo's sculpture of David wearing headphones djing.png" width="200px" height="auto" alt="Foto escritora Juliana">
+      </div>
+      <div class="card__botoes d-flex justify-content-start">
+        <ul class="botoes">
+          <li class="botoes__item"><img src="img/Compras.svg" alt="Figura compras"></li>
+          <li class="botoes__item"><img src="img/Favoritos.svg" alt="Figura compras"></li>
+      </ul>
+      </div>
       </div>
     </section>
-
     <!-- Seção de obras mais visitadas -->
     <section class="obras__destaques mt-3">
 
@@ -359,9 +370,57 @@
     
   </section>
 
+  <!-- Seção card propaganda -->
+  <section class="container w-80">
+    <div class="card__propaganda container w-70">
+      <div class="card__descricao d-flex justify-content-between ">
+          <div class="descricao">
+              <img src="img/Estrelinhas.svg" alt="Perfil cinco estrelas">
+              <h3 class="descricao__titulo">Autora do mês</h3>
+              <h2 class="descricao__titulo-livro">Juliana Agarikov</h2>
+              <p class="descricao__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End. </p>
+          </div>
+          <img src="img/Perfil-escritora 1.svg" alt="Foto escritora Juliana">
+      </div>
+      <div class="card__botoes d-flex justify-content-start">
+          <a href="#" class="botoes__ancora">Conheça a autora</a>
+      </div>
+      </div>
+    </section>
+
+    <!-- Seção tópicos -->
+    <section class="topicos container py-3">
+      <div class="topicos__titulo py-3">
+        <h2 class="justify-content-center py-3">Topicos Visitados Recentemente</h2>
+        <ul class="topicos__lista d-flex flex-row justify-content-evenly">
+          <li class="lista__topicos__item mx-3">
+            <a href="#" class="topicos__link">Ilustração Digital</a>
+          </li>
+          <li class="lista__topicos__item mx-3">
+            <a href="#" class="topicos__link">Animação 3D</a>
+          </li>
+          <li class="lista__topicos__item mx-3">
+            <a href="#" class="topicos__link">Modelagem</a>
+          </li>
+          <li class="lista__topicos__item mx-3">
+            <a href="#" class="topicos__link"> Pintura e Gravura Digital</a>
+          </li>
+          <li class="lista__topicos__item mx-3">
+            <a href="#" class="topicos__link">Edição de Fotografia e Imagens</a>
+          </li>
+          <li class="lista__topicos__item mx-3">
+            <a href="#" class="topicos__link">Colagem Digital</a>
+          </li>
+          <li class="lista__topicos__item mx-3">
+            <a href="#" class="topicos__link">Pixel Art</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
   <!-- Seção de rodapé -->
   <footer class="py-5 px-4">
-    <div class="row justify-content-between mx-4">
+    <div class="row justify-content-evenly mx-4">
       <div class="col-6 col-md-2 mb-3">
         <h5>Section</h5>
         <ul class="nav flex-column">
@@ -379,9 +438,9 @@
           <h5>Fique por dentro das novidades!</h5>
           <p>Atualizações de obras, promoções e outros..</p>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <label for="newsletter1" class="visually-hidden">Endereço de Email</label>
             <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-            <button class="btn btn-primary" type="button">Subscribe</button>
+            <button class="btn btn-primary " type="button">Inscreva-se</button>
           </div>
         </form>
       </div>
