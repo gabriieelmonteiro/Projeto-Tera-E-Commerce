@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login & cadastro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.1.0/esm/ionicons.min.js"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body class="text-center">
+    <!-- navBar -->
+    <header class="navbar navbar-brand navbar-expand{-sm|-md|-lg|-xl}">
+      <img
+        class="img-fluid"
+        src="img/fullFrameGGAF.jpg"
+        alt=""
+        width="72"
+        height="77"
+      />
+      <nav id="nav" class="nav navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="landingPage.html">About</a>
+        <!-- <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a> -->
+        <button
+          id="btnLogin-nav"
+          class="btnLogin-nav container__text text-center"
+        >
+          Login
+        </button>
+        <button id="btnReg-nav" class="btnReg-nav container__text text-center">
+          Register
+        </button>
+      </nav>
+    </header>
+
+    <div id="welcome"></div>
+
+    <!-- LOGINPART -->
+    <section
+      id="logContainer"
+      class="container logContainer mt-5 col-xs-6 col-md-6"
+    >
+      <main class="w-100 m-auto">
+        <form id="form" class="forms form form-login form-signin p-3 mb-3">
+          <h1 class="h3 mb-3 fw-normal">Fazer login</h1>
+
+          <!-- email -->
+          <div id="mail-box" class="form-floating mb-1 mail-box">
+            <input
+              type="email"
+              class="form-control form-control-mail"
+              id="form-control-mail"
+              name="email"
+              placeholder="name@example.com"
+              required
+            />
+            <label class="mailLabel" for="floatingInput">Email</label>
+            <div
+              id="error-mail-message-inside"
+              class="error-mail-message-inside"
+            ></div>
+          </div>
+
+          <div id="error-mail-message" class="error-mail-message"></div>
+
+          <!-- password -->
+          <div id="password-box" class="form-floating mb-1 password-box">
+            <input
+              type="password"
+              class="form-control form-control-password"
+              id="form-control-password"
+              placeholder="Senha"
+            />
+            <label class="passLabel" for="floatingPassword">Senha</label>
+            <div
+              id="error-pass-message-inside"
+              class="error-pass-message-inside"
+            ></div>
+          </div>
+
+          <div id="error-pass-message" class="error-pass-message"></div>
+
+          <!-- checkbox lembrar me -->
+          <div class="checkbox-log mb-3">
+            <label class="remember-me">
+              <input type="checkbox" value="remember-me" /> Lembrar-me
+            </label>
+          </div>
+
+          <!-- forgot password -->
+          <div class="forgot-password">
+            <a href="#">Esqueceu a Senha? (add margin-bottom)</a>
+          </div>
+
+          <!-- submit btn -->
+          <button
+            id="btn-log"
+            class="w-100 btn btn-log btn-primary"
+            type="submit"
+          >
+            Entrar
+          </button>
+        </form>
+
+        <!-- <div class="error"></div> -->
+
+        <!-- cadastrar-se agora btn -->
+        <button id="goToReg" class="goToReg container__text text-center">
+          Não tem cadastro? Clique aqui.
+        </button>
+      </main>
+    </section>
+
+    <!-- REGISTERPART -->
+    <section
+      id="regContainer"
+      class="container regContainer mt-5 col-xs-6 col-md-6"
+    >
+      <main class="w-100 m-auto">
+        <form
+          id="form1"
+          class="form forms form-register form-signup form p-3 mb-3"
+        >
+          <h1 class="h3 mb-3 fw-normal">Fazer cadastro</h1>
+
+          <!-- google btn -->
+          <button
+            id="btn-google"
+            type="button"
+            class="btn btn-primary btn-reg w-90 mb-5 btn-google"
+          >
+            <img
+              src="img/pesquisa.png"
+              width="30px"
+              height="30px"
+              alt="Logo Google"
+              class="mx-2"
+            />Cadastre com o Google
+          </button>
+
+          <!-- username -->
+          <div class="form-floating mb-1">
+            <input
+              type="text"
+              class="form-control form-control-user-reg"
+              id="form-control-user-reg"
+              placeholder="Usuario"
+            />
+            <label for="floatinguser">Nome de Usuário</label>
+          </div>
+
+          <!-- telephone -->
+          <div class="form-floating mb-1">
+            <input
+              type="tel"
+              class="form-control form-control-phone-reg"
+              id="form-control-phone-reg"
+              placeholder="Telefone"
+            />
+            <label for="floatingtel">Telefone</label>
+          </div>
+
+          <!-- email -->
+          <div id="mail-box-reg" class="form-floating mb-1 mail-box-reg">
+            <input
+              type="email"
+              class="form-control form-control-mail-reg"
+              id="form-control-mail-reg"
+              name="email"
+              placeholder="name@example.com"
+              required
+            />
+            <label class="mailLabelReg" for="floatingInput1">Email</label>
+            <div
+              id="error-mail-message-inside-reg"
+              class="error-mail-message-inside-reg"
+            ></div>
+          </div>
+
+          <div id="error-mail-message-reg" class="error-mail-message-reg"></div>
+
+          <!-- password -->
+          <div
+            id="password-box-reg"
+            class="form-floating mb-1 password-box-reg"
+          >
+            <input
+              type="password"
+              class="form-control form-control-password-reg"
+              id="form-control-password-reg"
+              placeholder="Senha"
+            />
+            <label class="passLabel" for="floatingPassword1"
+              >Senha (entre 8 e 15 caracteres)</label
+            >
+            <div
+              id="error-pass-message-inside-reg"
+              class="error-pass-message-inside-reg"
+            ></div>
+          </div>
+
+          <div id="error-pass-message-reg" class="error-pass-message-reg"></div>
+
+          <!-- checkbox agree with terms -->
+          <div
+            id="checkbox-log-reg"
+            class="mb-3 form-check px-5 mb-1 mx-0 checkbox-log-reg"
+          >
+            <label class="form-check-label" for="termos-uso"
+              ><input
+                type="checkbox"
+                class="form-check-input"
+                id="termos-uso"
+              />Concordo com os termos de uso</label
+            >
+          </div>
+
+          <!-- submit btn -->
+          <button
+            id="btn-register"
+            class="w-100 btn btn-reg btn-register btn-primary"
+            type="submit"
+          >
+            Cadastre-se
+          </button>
+        </form>
+
+        <!-- entrar agora btn -->
+        <button id="goToLogin" class="goToLogin container__text text-center">
+          Já tem uma conta? Clique aqui.
+        </button>
+      </main>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

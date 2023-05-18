@@ -1,0 +1,32 @@
+/* body {
+  background-color: #f5edd3;
+} */
+
+.form {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.container__text {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.error {
+  border: var(--bs-border-width) solid red;
+  color: red;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.img-fluid {
+  margin-left: 1%;
+  height: 60px;
+  width: auto;
+  border-radius: 3px;
+}

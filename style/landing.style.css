@@ -1,203 +1,102 @@
-:root {
-    --primary: #f5edd3;
-    --secondary: #7A5220;
-    --text-color: #000;
-    --text-color-secondary: #ffffff;
-
+.rounded {
+  max-width: 600px;
+  border: 0;
+  margin: 40px;
 }
 
-* {
-  font-family: "ROBOTO";
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- 
+.h2,
+.h1 {
+  max-width: 800px;
+  min-width: 550px;
+  /* DIMINUIR A FONTE À MEDIDA EM QUE DIMINUÍMOS A PÁGINA */
+}
+.navbar-collapse {
+  flex-grow: 0;
 }
 
-
-#description {
-  height: 400px;
-  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
-  url("../img/Gionna\,\ realist.png");
-  background-position: center;
-  background-size: cover;
-  height: 85vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: var(--text-color-secondary);
-}
-#BEM-VINDO h1{
-  color:var(--text-color-secondary)
-}
-#BEM-VINDO h1{
-  font-size: 3em;
-  margin-bottom:1em;
-  max-width: 700px;
-}
-#subscription-form{
-  background-color:var(--text-color);
-  padding: 2em;
-  max-width: 22%;
-}
-#subscription-form{
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-
-.form-group{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.8em;
-}
-.form-group label{
-  color: var(--text-color-secondary);
-  margin-bottom: 0.3em;
-  font-weight: bold;
-}
-.form-group input,
-.form-group select{
-  padding: 6px 8px;
+.form-row {
+  background-color: rgb(241, 241, 241);
+  border: #000000 1px;
   border-radius: 5px;
-  border: none;
-  outline: none;
+  width: 400px;
+  padding: 20px;
+  margin: auto;
 }
-.btn{
-  background-color: var(--primary);
-  color: var(--text-color);
-  text-transform:uppercase ;
-  width: 100%;
-  padding:12px;
-  margin-top: 5%;
-  border:none;
-  padding: 12px ;
-  cursor: pointer;
-  opacity: 0.8;
+
+.banner__pesquisa__input,
+.contato__email {
+  border: 1px solid #000000;
+  border-radius: 24px;
+  padding: 1em;
+  border-radius: 24px;
 }
-.btn:hover {
-  opacity:1 ;
-}
-#QUEM-SOMOS h2{
-  display: flex;
-  background-color: #f5edd3;
+.banner__pesquisa__input::placeholder,
+.contato__email::placeholder {
   text-align: center;
-  font-size: 2.0em;
-  padding: 2em ;
-  font-weight: 700;
-  align-items:center;
-  justify-content: space-between;
-  gap: 5%;
-  margin-bottom: 4em;
+  background-position: 0.5em;
+}
+.container__imagem--compras,
+.container__imagem--favoritos,
+.container__imagem__perfil {
+  display: none;
 }
 
-.QUEM-SOMOS img{
-  display:flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 5%;
-  margin-bottom: 4em;
+.botoes__item,
+.botoes {
+  list-style: none;
+  text-decoration: none;
 }
-
-#RAZAO h3{
-  display: flex;
-  background-color: #f5edd3;
-  text-align: center;
-  font-size: 2.0em;
-  padding: 2em;
-  font-weight: 700;
-  align-items: center;
-  justify-content:space-between;
-  gap: 5%;
-  margin-bottom: 0em;
+.topicos__lista {
+  flex-wrap: wrap;
 }
-.RAZAO img{
-  display: flex;
-  align-items: flex-start;
-  justify-content:space-between;
-  gap: 5%;
-  margin-bottom: 4em;
-}
-
-img{
-  width: 45%;
-}
-
-#textos{
-  background-color: #f5edd3;
-}
-#footer{
-  margin-top: 0%;
-}
-
-#rodape{
-  background-color: #292827;
-  text-align: center;
-  color:var(--primary);
-  height: 300px;
-  display: flex;
-  flex-direction: column;
+.lista__topicos__item,
+.topicos__link {
+  list-style: none;
+  text-decoration: none;
   justify-content: center;
-}
-#rodape h3{
-  font-size: 1.8em;
-  margin-bottom: 1em;
-
-}
-#rodape p:nth-child(2) {
-  margin-bottom: 1em;
-  font-size: 1.2em;
-}
-#rodape span{
-  font-weight: bold;
+  color: #ffffff;
+  padding: 1em;
+  background-color: #eb9b00;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 1em 0.5em;
 }
 
-/* Mobile */
-@media (max-width:450px) {
+.card__propaganda {
+  border: 1px solid #000000;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 1em;
+  padding: 1em;
+  width: 70%;
+}
+.card__descricao {
+  align-items: center;
+  padding: 1em;
+}
+.card__propaganda__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.botoes {
+  display: flex;
+}
+.botoes__ancora {
+  background-color: #eb9b00;
+  padding: 1em 2.2em;
+  color: var(--branco);
+  font-weight: 700;
+  text-decoration: none;
+}
 
-  #description {
-    flex-direction: column;
-    height: auto;
+@media screen and (min-width: 1024px) {
+  .container__imagem--compras {
+    display: block;
   }
-  #BEM-VINDO {
-
-    padding: 2em;
-
+  .container__imagem--favoritos {
+    display: block;
   }
-  #BEM-VINDO h1{
-    font-size: medium;
-    margin-bottom: 0.5em;
+  .container__imagem__perfil {
+    display: block;
   }
-  #subscription-form{
-    max-width: 70%;
-    margin-bottom: 2em;
-  }
-  #QUEM-SOMOS{
-    padding: 2em;
-  }
-  #QUEM-SOMOS h2{
-    font-size: medium;
-    margin-bottom: 0.5em;
-    flex-direction: column;
-
-  }
-  
- #QUEM-SOMOS img{
-  width: 100%;
-  margin: 2em 0;
-
-}
-#RAZAO{
-  padding: 2em;
-
-}
-#RAZAO h3{
-  font-size: medium;
-  margin-bottom: 0.5em;
-  flex-direction: column;
-
-}
-#RAZAO img{
-  width: 100%;
-  margin: 2em 0;
-}
 }

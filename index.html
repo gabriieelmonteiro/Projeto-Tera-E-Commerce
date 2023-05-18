@@ -1,243 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="style/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/index.css" />
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+  </head>
 
-  <!-- Seção Header barra de navegação -->
-    <header class="mb-3">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-between">
-        <div class="container-fluid d-flex flex-row justify-content-between ">
-        
-          <a class="navbar-brand" href="#">GAGF</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-          <div class="collapse navbar-collapse mb-3" id="navbarSupportedContent">
-            <div class="container-fluid px-3">
-            <ul class="navbar-nav px-3 me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="login.html">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="cadastro.html">Cadastre-se</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Categorias
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Ilustração Digital</a></li>
-                  <li><a class="dropdown-item" href="#">Animações 3D</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Pintura e Gravura digital</a></li>
-                </ul>
-                <li class="nav-item">
-                  <a class="nav-link active" href="landingPage.html">Quem somos</a>
-                </li>
-              </li>
-            </ul>
-            </div>
-            </div>
-            <div class="container d-flex flex-row justify-content-end">
-                <a href="#"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem--favoritos">
-                </a>
-                <a href="#" class="container__link">
-                    <img src="img/Compras.svg" alt="Minha sacola" class="container__imagem container__imagem--compras">
-                </a>
-                <div class="dropdown container container__imagem__perfil">
-                <button class="btn dropdown-toggle classcontain container__imagem__perfil d-flex flex-row" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem container__imagem__perfil">
-                    <ul class="dropdown-menu container__imagem__perfil">
-                      <li><a class="dropdown-item" href="#">Perfil</a></li>
-                      <li><a class="dropdown-item" href="#">Favoritos</a></li>
-                      <li><a class="dropdown-item" href="#">Minhas coleções</a></li>
-                    </ul>
-                  </div>
-                
-        </div>
-      </nav>
-    </header>
+  <body>
+    <!-- Seção Header barra de navegação -->
+    <nav
+      class="row navbar navbar-expand-lg navbar-collapse navbar-light bg-light w-100"
+    >
+      <div class="collapse navbar-collapse container-fluid">
+        <a class="navbar-brand logo w-auto h-auto" href="#">GGAF</a>
 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="main.html">Login e Cadastro</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categorias
+              </a>
+              <ul class="dropdown-menu">
+                <a class="dropdown-item" href="#">Ilustração Digital</a>
+                <a class="dropdown-item" href="#">Animação 3D</a>
+                <a class="dropdown-item" href="#">Pintura e Gravura Digital</a>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="landingPage.html">Quem Somos</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="navbar-collapse h-auto w-auto">
+          <div class="nav-item">
+            <a type="button" href="#"
+              ><img src="img/Favoritos.svg" alt="Meus favoritos" class="" />
+            </a>
+          </div>
+
+          <div class="nav-item">
+            <a type="button" href="#" class="container__link">
+              <img src="img/Compras.svg" alt="Minha sacola" class="" />
+            </a>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              href="#"
+              ><img src="img/Usuário.svg" alt="Meu perfil" />
+              <ul class="dropdown-menu container__imagem__perfil">
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                <li><a class="dropdown-item" href="#">Minhas coleções</a></li>
+              </ul>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <!-- Seção banner de pesquisa -->
     <section class="banner__pesquisa text-center mb-3 container w-50">
-        
-        <h1 class="banner__titulo">Já sabe por onde começar?</h1>
-        <p class="banner__texto">Encontre aqui a obra que você procura!</p>
-        <input type="search" placeholder="Busque pela obra autor ou categoria" class="banner__pesquisa__input w-100">
+      <h1 class="banner__titulo">Já sabe por onde começar?</h1>
+      <p class="banner__texto">Encontre aqui a obra que você procura!</p>
+      <input
+        type="search"
+        placeholder="Busque pela obra autor ou categoria"
+        class="banner__pesquisa__input w-100"
+      />
     </section>
-
 
     <!-- Seção lançamentos -->
     <section class="obras__recentes mt-3">
-        <h2 class="mb-3 mx-4">Novos lançamentos</h2>
-        <div class="row mx-4">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 justify-content-around">
-            <div class="card mx-3">
-              <img
-                src="img/DALL·E 2023-04-19 21.05.32 - 3D render of a cute tropical fish in an aquarium on a dark blue background, digital art.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="card-title">Cute tropical fish</div>
-                <div class="card-text text-center">
-                  Obra de DALL.E2
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <div class="card mx-3">
-              <img
-                src="img/DALL·E 2023-04-19 21.06.20 - A cartoon of a monkey in space.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="card-title">Monkey in space</div>
-                <div class="card-text text-center">
-                  Obra de DALL.E2
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <div class="card mx-3">
-              <img
-                src="img/DALL·E 2023-04-19 21.06.53 - A photo of a teddy bear on a skateboard in Times Square.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="card-title">Teddy bear on a skateboard</div>
-                <div class="card-text text-center">
-                  Obra de DALL.E2
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <div class="card mx-3">
-              <img
-                src="img/DALL·E 2023-04-19 21.06.53 - A photo of a teddy bear on a skateboard in Times Square.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="card-title">Teddy bear on a skateboard</div>
-                <div class="card-text text-center">
-                  Obra de DALL.E2
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <div class="card mx-3">
-              <img
-                src="img/DALL·E 2023-04-19 21.08.49 - A photo of a Samoyed dog with its tongue out hugging a white Siamese cat.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="card-title">Samoyed dog</div>
-                <div class="card-text text-center">
-                  Obra de DALL.E2
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <div class="card mx-3">
-              <img
-                src="img/DALL·E 2023-04-19 21.09.20 - Two futuristic towers with a skybridge covered in lush foliage, digital art.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="card-title">Futuristic towers</div>
-                <div class="card-text text-center">
-                  Creditas
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <div class="card mx-3">
-              <img
-                src="img/DALL·E 2023-04-19 21.05.32 - 3D render of a cute tropical fish in an aquarium on a dark blue background, digital art.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="card-title">Cute tropical fish</div>
-                <div class="card-text text-center">
-                  Obra de DALL.E2
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <div class="card mx-3">
-              <img
-                src="img/DALL·E 2023-04-19 21.06.20 - A cartoon of a monkey in space.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="card-title">Monkey in space</div>
-                <div class="card-text text-center">
-                  Obra de DALL.E2
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          
-        </div>
-      
-    </section>
-
-    <!-- seção card propaganda -->
-    <section class="container w-80">
-    <div class="card__propaganda container w-70">
-      <div class="card__descricao d-flex justify-content-between ">
-          <div class="descricao">
-              <h3 class="descricao__texto">Talvez você se interesse por... </h3>
-              <p class="descricao__titulo-livro">Obra comtemporanea inspirada em Michelangelo feita atráves da DALL.E 2</p>
-          </div>
-          <img src="img/DALL·E 2023-04-23 19.19.58 - A photo of Michelangelo's sculpture of David wearing headphones djing.png" width="200px" height="auto" alt="Foto escritora Juliana">
-      </div>
-      <div class="card__botoes d-flex justify-content-start">
-        <ul class="botoes">
-          <li class="botoes__item"><img src="img/Compras.svg" alt="Figura compras"></li>
-          <li class="botoes__item"><img src="img/Favoritos.svg" alt="Figura compras"></li>
-      </ul>
-      </div>
-      </div>
-    </section>
-    <!-- Seção de obras mais visitadas -->
-    <section class="obras__destaques mt-3">
-
-      <h2 class="mb-3 mx-4">Obras mais visitadas</h2>
+      <h2 class="mb-3 mx-4">Novos lançamentos</h2>
       <div class="row mx-4">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 justify-content-around">
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 justify-content-around"
+        >
           <div class="card mx-3">
             <img
               src="img/DALL·E 2023-04-19 21.05.32 - 3D render of a cute tropical fish in an aquarium on a dark blue background, digital art.png"
@@ -246,12 +120,9 @@
             />
             <div class="card-body">
               <div class="card-title">Cute tropical fish</div>
-              <div class="card-text text-center">
-                Obra de DALL.E2
-              </div>
+              <div class="card-text text-center">DALL.E2</div>
             </div>
           </div>
-          
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card mx-3">
@@ -262,12 +133,9 @@
             />
             <div class="card-body">
               <div class="card-title">Monkey in space</div>
-              <div class="card-text text-center">
-                Obra de DALL.E2
-              </div>
+              <div class="card-text text-center">DALL.E2</div>
             </div>
           </div>
-          
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card mx-3">
@@ -278,12 +146,9 @@
             />
             <div class="card-body">
               <div class="card-title">Teddy bear on a skateboard</div>
-              <div class="card-text text-center">
-                Obra de DALL.E2
-              </div>
+              <div class="card-text text-center">DALL.E2</div>
             </div>
           </div>
-          
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card mx-3">
@@ -294,12 +159,9 @@
             />
             <div class="card-body">
               <div class="card-title">Teddy bear on a skateboard</div>
-              <div class="card-text text-center">
-                Obra de DALL.E2
-              </div>
+              <div class="card-text text-center">DALL.E2</div>
             </div>
           </div>
-          
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card mx-3">
@@ -310,12 +172,9 @@
             />
             <div class="card-body">
               <div class="card-title">Samoyed dog</div>
-              <div class="card-text text-center">
-                Obra de DALL.E2
-              </div>
+              <div class="card-text text-center">DALL.E2</div>
             </div>
           </div>
-          
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card mx-3">
@@ -326,12 +185,9 @@
             />
             <div class="card-body">
               <div class="card-title">Futuristic towers</div>
-              <div class="card-text text-center">
-                Creditas
-              </div>
+              <div class="card-text text-center">Creditas</div>
             </div>
           </div>
-          
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card mx-3">
@@ -342,12 +198,9 @@
             />
             <div class="card-body">
               <div class="card-title">Cute tropical fish</div>
-              <div class="card-text text-center">
-                Obra de DALL.E2
-              </div>
+              <div class="card-text text-center">DALL.E2</div>
             </div>
           </div>
-          
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card mx-3">
@@ -358,40 +211,183 @@
             />
             <div class="card-body">
               <div class="card-title">Monkey in space</div>
-              <div class="card-text text-center">
-                Obra de DALL.E2
-              </div>
+              <div class="card-text text-center">DALL.E2</div>
             </div>
           </div>
-          
         </div>
-        
       </div>
-    
-  </section>
+    </section>
 
-  <!-- Seção card propaganda -->
-  <section class="container w-80">
-    <div class="card__propaganda container w-70">
-      <div class="card__descricao d-flex justify-content-between ">
+    <!-- seção card propaganda -->
+    <section class="container w-80">
+      <div class="card__propaganda container w-70">
+        <div class="card__descricao d-flex justify-content-between">
           <div class="descricao">
-              <img src="img/Estrelinhas.svg" alt="Perfil cinco estrelas">
-              <h3 class="descricao__titulo">Autora do mês</h3>
-              <h2 class="descricao__titulo-livro">Juliana Agarikov</h2>
-              <p class="descricao__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End. </p>
+            <h3 class="descricao__texto">Talvez você se interesse por...</h3>
+            <p class="descricao__titulo-livro">
+              Obra comtemporanea inspirada em Michelangelo feita atráves da
+              DALL.E 2
+            </p>
           </div>
-          <img src="img/Perfil-escritora 1.svg" alt="Foto escritora Juliana">
+          <img
+            src="img/DALL·E 2023-04-23 19.19.58 - A photo of Michelangelo's sculpture of David wearing headphones djing.png"
+            width="200px"
+            height="auto"
+            alt="Foto escritora Juliana"
+          />
+        </div>
+        <div class="card__botoes d-flex justify-content-start">
+          <ul class="botoes">
+            <li class="botoes__item">
+              <img src="img/Compras.svg" alt="Figura compras" />
+            </li>
+            <li class="botoes__item">
+              <img src="img/Favoritos.svg" alt="Figura compras" />
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="card__botoes d-flex justify-content-start">
+    </section>
+    <!-- Seção de obras mais visitadas -->
+    <section class="obras__destaques mt-3">
+      <h2 class="mb-3 mx-4">Obras mais visitadas</h2>
+      <div class="row mx-4">
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 justify-content-around"
+        >
+          <div class="card mx-3">
+            <img
+              src="img/DALL·E 2023-04-19 21.05.32 - 3D render of a cute tropical fish in an aquarium on a dark blue background, digital art.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-title">Cute tropical fish</div>
+              <div class="card-text text-center">DALL.E2</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="card mx-3">
+            <img
+              src="img/DALL·E 2023-04-19 21.06.20 - A cartoon of a monkey in space.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-title">Monkey in space</div>
+              <div class="card-text text-center">DALL.E2</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="card mx-3">
+            <img
+              src="img/DALL·E 2023-04-19 21.06.53 - A photo of a teddy bear on a skateboard in Times Square.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-title">Teddy bear on a skateboard</div>
+              <div class="card-text text-center">DALL.E2</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="card mx-3">
+            <img
+              src="img/DALL·E 2023-04-19 21.06.53 - A photo of a teddy bear on a skateboard in Times Square.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-title">Teddy bear on a skateboard</div>
+              <div class="card-text text-center">DALL.E2</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="card mx-3">
+            <img
+              src="img/DALL·E 2023-04-19 21.08.49 - A photo of a Samoyed dog with its tongue out hugging a white Siamese cat.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-title">Samoyed dog</div>
+              <div class="card-text text-center">Obra de DALL.E2</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="card mx-3">
+            <img
+              src="img/DALL·E 2023-04-19 21.09.20 - Two futuristic towers with a skybridge covered in lush foliage, digital art.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-title">Futuristic towers</div>
+              <div class="card-text text-center">Creditas</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="card mx-3">
+            <img
+              src="img/DALL·E 2023-04-19 21.05.32 - 3D render of a cute tropical fish in an aquarium on a dark blue background, digital art.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-title">Cute tropical fish</div>
+              <div class="card-text text-center">DALL.E2</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="card mx-3">
+            <img
+              src="img/DALL·E 2023-04-19 21.06.20 - A cartoon of a monkey in space.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-title">Monkey in space</div>
+              <div class="card-text text-center">DALL.E2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção card propaganda -->
+    <section class="container w-80">
+      <div class="card__propaganda container w-70">
+        <div class="card__descricao d-flex justify-content-between">
+          <div class="descricao">
+            <img src="img/Estrelinhas.svg" alt="Perfil cinco estrelas" />
+            <h3 class="descricao__titulo">Autora do mês</h3>
+            <h2 class="descricao__titulo-livro">Juliana Agarikov</h2>
+            <p class="descricao__texto">
+              Analista de sistemas e escritora, Juliana é especialista em
+              Front-End.
+            </p>
+          </div>
+          <img src="img/Perfil-escritora 1.svg" alt="Foto escritora Juliana" />
+        </div>
+        <div class="card__botoes d-flex justify-content-start">
           <a href="#" class="botoes__ancora">Conheça a autora</a>
-      </div>
+        </div>
       </div>
     </section>
 
     <!-- Seção tópicos -->
     <section class="topicos container py-3">
       <div class="topicos__titulo py-3">
-        <h2 class="justify-content-center py-3">Topicos Visitados Recentemente</h2>
+        <h2 class="justify-content-center py-3">
+          Topicos Visitados Recentemente
+        </h2>
         <ul class="topicos__lista d-flex flex-row justify-content-evenly">
           <li class="lista__topicos__item mx-3">
             <a href="#" class="topicos__link">Ilustração Digital</a>
@@ -418,46 +414,63 @@
       </div>
     </section>
 
-  <!-- Seção de rodapé -->
-  <footer class="py-5 px-4">
-    <div class="row justify-content-evenly mx-4">
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
+    <!-- Seção de rodapé -->
+    <footer class="">
+      <div class="row justify-content-evenly mx-4">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Fique por dentro das novidades!</h5>
+            <p>Atualizações de obras, promoções e outros..</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden"
+                >Endereço de Email</label
+              >
+              <input
+                id="newsletter1"
+                type="text"
+                class="form-control"
+                placeholder="Email address"
+              />
+              <button class="btn btn-primary" type="button">Inscreva-se</button>
+            </div>
+          </form>
+        </div>
       </div>
 
-
-      <div class="col-md-5 offset-md-1 mb-3">
-        <form>
-          <h5>Fique por dentro das novidades!</h5>
-          <p>Atualizações de obras, promoções e outros..</p>
-          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-            <label for="newsletter1" class="visually-hidden">Endereço de Email</label>
-            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-            <button class="btn btn-primary " type="button">Inscreva-se</button>
-          </div>
-        </form>
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between border-top"
+      >
+        <p>© 2023 GGAF Inc. All rights reserved.</p>
       </div>
-    </div>
-
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top ">
-      <p>© 2023 Company, Inc. All rights reserved.</p>
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-      </ul>
-    </div>
-  </footer>
+    </footer>
 
     <script src="js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
