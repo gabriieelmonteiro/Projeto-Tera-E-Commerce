@@ -1,9 +1,47 @@
-footer {
-  padding: 0 20px;
+.rounded {
+  max-width: 600px;
+  border: 0;
+  margin: 40px;
 }
 
+.form-inline .form-group {
+  display: inline-block;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+footer {
+  padding: 0px;
+}
+
+.active {
+  margin: 0 20px;
+}
+
+.h2,
+.h1 {
+  max-width: 800px;
+  min-width: 550px;
+  /* DIMINUIR A FONTE À MEDIDA EM QUE DIMINUÍMOS A PÁGINA */
+}
 .navbar-collapse {
   flex-grow: 0;
+}
+
+/* não usado abaixo */
+.form-row {
+  background-color: rgb(241, 241, 241);
+  border: #000000 1px;
+  border-radius: 5px;
+  width: 400px;
+  padding: 20px;
+  margin: auto;
 }
 
 .banner__pesquisa__input,
