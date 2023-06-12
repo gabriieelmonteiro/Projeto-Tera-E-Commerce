@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node -r dotenv-safe/config server.js",
+    "dev": "nodemon -r dotenv-safe/config server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv-safe": "^8.2.0",
-    "express": "^4.18.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.22"
   }
 }
