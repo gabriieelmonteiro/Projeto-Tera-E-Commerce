@@ -1,3 +1,4 @@
+import bcrypt from "bcrypt";
 import UserSchema from "../models/userSchema.js";
 
 // O CRUD será montado neste arquivo: userControllers
@@ -25,6 +26,9 @@ const getAll = async (req, res) => {
 
 // Criar novo usuário e registrar na Database
 const createUser = async (req, res) => {
+  // Hasherizar a senha
+  const hashedPassword = bcrypt.hashSync(req.body.password, 10);
+  req.body.password = hashedPassword;
   // Acessar as informações do usuário que vem do frontend
   // Acessar a partir do body da requisição
   try {
