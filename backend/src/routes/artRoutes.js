@@ -1,9 +1,9 @@
 import express from "express";
-const router = express.Router();
+const artRoutes = express.Router();
 
-import controllers from "../controllers/arts/artsControllers.js";
+import controllers from "../controllers/artsControllers.js";
 
-router.get("/arts", controllers.getAllArts);
-router.post("/arts", controllers.createArt);
+artRoutes.get("/arts", controllers.getAllArts);
+artRoutes.post("/arts", controllers.createArt);
 
-export default router;
+export default artRoutes;

@@ -25,7 +25,7 @@ const artsSchema = new mongoose.Schema(
       required: true,
     },
     isUnique: {
-      type: boolean,
+      type: Boolean,
       required: true,
     },
     quantity: {

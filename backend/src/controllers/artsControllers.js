@@ -1,4 +1,4 @@
-import ArtsSchema from "../models/artsSchema";
+import ArtsSchema from "../models/artsSchema.js";
 
 // O CRUD será montado neste arquivo: artsControllers
 

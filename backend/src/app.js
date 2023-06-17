@@ -15,9 +15,10 @@ app.use(express.json()); // Utilizado para poder adotar as requisições HTTP  c
 import db from "./config/database.js"; // importando o banco de dados
 db.connect();
 
-import routes from "./routes/userRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+import artRoutes from "./routes/artRoutes.js";
 
 // definir uma rota principal para o projeto (cadastro de usuários)
-app.use("/users", routes);
+app.use("/", [userRoutes, artRoutes]);
 
 export default app; // exportando variável para que ela fiquei disponível para outros módulos
