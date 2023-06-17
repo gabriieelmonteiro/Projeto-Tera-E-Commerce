@@ -1,10 +1,10 @@
 import bcrypt from "bcrypt";
-import UserSchema from "../models/userSchema.js";
+import UserSchema from "../models/userSchema";
 
 // O CRUD será montado neste arquivo: userControllers
 
 // Listar todos os usuários da Database
-const getAll = async (req, res) => {
+const getAllUsers = async (req, res) => {
   try {
     const users = await UserSchema.find();
     if (!users) {
@@ -54,6 +54,6 @@ const createUser = async (req, res) => {
 };
 
 export default {
-  getAll,
+  getAllUsers,
   createUser,
 };
