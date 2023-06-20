@@ -1,0 +1,123 @@
+.rounded {
+    max-width: 600px;
+    border: 0;
+    margin: 40px;
+  }
+  
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: middle;
+  }
+  
+  .form-inline .form-control {
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: middle;
+  }
+  
+  .footer {
+    padding: 0px;
+  }
+  
+  .active {
+    margin: 0 20px;
+  }
+  
+  .h2,
+  .h1 {
+    max-width: 800px;
+    min-width: 550px;
+    /* DIMINUIR A FONTE À MEDIDA EM QUE DIMINUÍMOS A PÁGINA */
+  }
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+  
+  /* não usado abaixo */
+  .form-row {
+    background-color: rgb(241, 241, 241);
+    border: #000000 1px;
+    border-radius: 5px;
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .banner__pesquisa__input,
+  .contato__email {
+    border: 1px solid #000000;
+    border-radius: 24px;
+    padding: 1em;
+    border-radius: 24px;
+  }
+  .banner__pesquisa__input::placeholder,
+  .contato__email::placeholder {
+    text-align: center;
+    background-position: 0.5em;
+  }
+  .container__imagem--compras,
+  .container__imagem--favoritos,
+  .container__imagem__perfil {
+    display: none;
+  }
+  
+  .botoes__item,
+  .botoes {
+    list-style: none;
+    text-decoration: none;
+  }
+  .topicos__lista {
+    flex-wrap: wrap;
+  }
+  .lista__topicos__item,
+  .topicos__link {
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    color: #ffffff;
+    padding: 1em;
+    background-color: #eb9b00;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 1em 0.5em;
+  }
+  
+  .card__propaganda {
+    border: 1px solid #000000;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    width: 70%;
+  }
+  .card__descricao {
+    align-items: center;
+    padding: 1em;
+  }
+  .card__propaganda__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .botoes {
+    display: flex;
+  }
+  .botoes__ancora {
+    background-color: #eb9b00;
+    padding: 1em 2.2em;
+    color: var(--branco);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .container__imagem--compras {
+      display: block;
+    }
+    .container__imagem--favoritos {
+      display: block;
+    }
+    .container__imagem__perfil {
+      display: block;
+    }
+  }

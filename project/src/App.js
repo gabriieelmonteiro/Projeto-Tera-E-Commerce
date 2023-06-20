@@ -4,6 +4,10 @@ import Home from './components/pages/Home';
 import Login from './components/pages/Login';
 import LandingPage from './components/pages/LandingPage';
 
+import "./styles/login.css"
+import "./styles/LandingPage.css"
+import "./styles/home.css"
+
 function App() {
   return (
     <BrowserRouter>
