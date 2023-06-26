@@ -6,7 +6,7 @@ import teddy from "../../img/DALL·E 2023-04-19 21.06.53 - A photo of a teddy be
 import futuristic from "../../img/DALL·E 2023-04-19 21.09.20 - Two futuristic towers with a skybridge covered in lush foliage, digital art.png";
 import dog from "../../img/DALL·E 2023-04-19 21.05.32 - 3D render of a cute tropical fish in an aquarium on a dark blue background, digital art.png";
 
-import Default from "../template/Default";
+import Default from "../templates/Default";
 
 export default function Home() {
   return (
