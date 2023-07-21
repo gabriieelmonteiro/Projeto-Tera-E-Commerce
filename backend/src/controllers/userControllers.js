@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import UserSchema from "../models/userSchema.js";
+import UserSchema from "../models/usersSchema.js";
 
 // O CRUD será montado neste arquivo: userControllers
 

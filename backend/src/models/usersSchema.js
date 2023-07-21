@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema(
+const usersSchema = new mongoose.Schema(
   {
     id: mongoose.Schema.Types.ObjectId, // método do mongoose para gerar ID automático
     name: {
@@ -26,4 +26,4 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("user", userSchema); // "user" é a Collection criada com esse Schema. Os dados nesse formato serão salvos nessa Collection
+export default mongoose.model("users", usersSchema); // "users" é a Collection criada com esse Schema. Os dados nesse formato serão salvos nessa Collection

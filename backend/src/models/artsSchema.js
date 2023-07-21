@@ -24,17 +24,14 @@ const artsSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    isUnique: {
-      type: Boolean,
+    artist: {
+      type: String,
       required: true,
     },
     quantity: {
       type: String,
       required: true, // IDK
     },
-    // artist: {
-    //     importar usuário
-    // }
   },
   { timestamps: true }
 );
