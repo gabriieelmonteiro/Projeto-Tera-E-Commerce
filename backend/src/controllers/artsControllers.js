@@ -48,7 +48,44 @@ const createArt = async (req, res) => {
   }
 };
 
+// UPDATE = Atualizar usuário e salvar na Database
+const updateArt = async (req, res) => {
+  try {
+    const updatedArt = await ArtsSchema.findByIdAndUpdate(
+      req.params.id,
+      req.body
+    );
+    // enviar a resposta
+    res.status(200).send({
+      message: "Arte atualizada com sucesso",
+      statusCode: 200,
+      data: updatedArt,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+    console.error(error);
+  }
+};
+
+// DELETE = Deletar usuário da Database
+const deleteArt = async (req, res) => {
+  try {
+    // acessar id e deletar o registro
+    await ArtsSchema.findByIdAndDelete(req.params.id);
+    // enviar a resposta
+    res.status(200).send({
+      message: "Arte deletada com sucesso",
+      statusCode: 200,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+    console.error(error);
+  }
+};
+
 export default {
   getAllArts,
   createArt,
+  updateArt,
+  deleteArt,
 };
