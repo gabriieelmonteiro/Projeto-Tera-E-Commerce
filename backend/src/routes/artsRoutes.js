@@ -3,7 +3,7 @@ const artsRoutes = express.Router();
 
 import controllers from "../controllers/artsControllers.js";
 
-artsRoutes.get("/arts", controllers.getAllArts);
-artsRoutes.post("/arts", controllers.createArt);
+artsRoutes.get("/", controllers.getAllArts);
+artsRoutes.post("/", controllers.createArt);
 
 export default artsRoutes;

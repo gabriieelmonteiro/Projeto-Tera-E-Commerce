@@ -17,8 +17,8 @@ const artsSchema = new mongoose.Schema(
       required: false,
     },
     tags: {
-      type: Object, // é possível isso?
-      required: false,
+      type: Array,
+      required: true,
     },
     image: {
       type: String,
@@ -29,8 +29,8 @@ const artsSchema = new mongoose.Schema(
       required: true,
     },
     quantity: {
-      type: String,
-      required: true, // IDK
+      type: Number,
+      required: true,
     },
   },
   { timestamps: true }

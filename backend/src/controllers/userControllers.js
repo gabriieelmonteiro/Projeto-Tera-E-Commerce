@@ -1,12 +1,12 @@
 import bcrypt from "bcrypt";
-import UserSchema from "../models/usersSchema.js";
+import UsersSchema from "../models/usersSchema.js";
 
-// O CRUD será montado neste arquivo: userControllers
+// O CRUD (Create, Read, Update, Delete) será montado neste arquivo: userControllers
 
-// Listar todos os usuários da Database
+// READ = Listar todos os usuários da Database
 const getAllUsers = async (req, res) => {
   try {
-    const users = await UserSchema.find();
+    const users = await UsersSchema.find();
     if (!users) {
       res.status(500).send({
         statusCode: 500,
@@ -24,7 +24,7 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-// Criar novo usuário e registrar na Database
+// CREATE = Criar novo usuário e registrar na Database
 const createUser = async (req, res) => {
   // Hasherizar a senha
   const hashedPassword = bcrypt.hashSync(req.body.password, 10);
@@ -33,7 +33,7 @@ const createUser = async (req, res) => {
   // Acessar a partir do body da requisição
   try {
     // Criar um novo usuário
-    const newUser = new UserSchema(req.body);
+    const newUser = new UsersSchema(req.body);
     console.log(newUser);
     // Salva esse usuário
     const savedUser = await newUser.save();
@@ -53,7 +53,44 @@ const createUser = async (req, res) => {
   }
 };
 
+// UPDATE = Atualizar usuário e salvar na Database
+const updateUser = async (req, res) => {
+  try {
+    const updatedUser = await UsersSchema.findByIdAndUpdate(
+      req.params.id,
+      req.body
+    );
+    // enviar a resposta
+    res.status(200).send({
+      message: "Usuário atualizado com sucesso",
+      statusCode: 200,
+      data: updatedUser,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+    console.error(error);
+  }
+};
+
+// DELETE = Deletar usuário da Database
+const deleteUser = async (req, res) => {
+  try {
+    // acessar id e deletar o registro
+    await UsersSchema.findByIdAndDelete(req.params.id);
+    // enviar a resposta
+    res.status(200).send({
+      message: "Usuário deletado com sucesso",
+      statusCode: 200,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+    console.error(error);
+  }
+};
+
 export default {
   getAllUsers,
   createUser,
+  updateUser,
+  deleteUser,
 };

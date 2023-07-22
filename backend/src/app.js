@@ -18,7 +18,8 @@ db.connect();
 import usersRoutes from "./routes/usersRoutes.js";
 import artsRoutes from "./routes/artsRoutes.js";
 
-// definir uma rota principal para o projeto (cadastro de usuários)
-app.use("/", [usersRoutes, artsRoutes]);
+// definir rotas principais para o projeto (cadastro de usuários e de obras)
+app.use("/users", usersRoutes);
+app.use("/arts", artsRoutes);
 
 export default app; // exportando variável para que ela fiquei disponível para outros módulos
