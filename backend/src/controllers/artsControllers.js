@@ -83,6 +83,8 @@ const deleteArt = async (req, res) => {
   }
 };
 
+// const buyArt = ... POST
+
 export default {
   getAllArts,
   createArt,
