@@ -92,11 +92,6 @@ const deleteUser = async (req, res) => {
 // POST Art em users.collection (coleção de obras do usuário) buyArt = ... POST
 
 const buyArt = async (req, res) => {
-  // Ler a quantidade de compra que vem do frontend
-  // Confrontar a quantidade de compra com a quantidade em estoque
-  // Subtrair o valor no Schema da Art, no estoque (propriedade "quantity")
-  // Pegar e Adicionar um "clone" da arte, com seu Schema (e seus dados) na Array da Coleção do Usuário
-
   try {
     // Acessar o ID do usuário que já está logado
     // Acessar o ID da obra que está sendo adquirida
@@ -104,10 +99,14 @@ const buyArt = async (req, res) => {
     const currentArt = await ArtsSchema.findById(req.params.artId);
     console.log(currentUser);
     console.log(currentArt);
+    // Ler a quantidade de compra que vem do frontend
+    acquisitionQuantity = 1;
+    // Confrontar a quantidade de compra com a quantidade em estoque
+    // Subtrair o valor no Schema da Art, no estoque (propriedade "quantity")
+    currentArt.quantity = currentArt.quantity - acquisitionQuantity;
+    // Pegar e Adicionar um "clone" da arte, com seu Schema (e seus dados) na Array da Coleção do Usuário
 
-    // Salva esse usuário
-    //const savedUser = await newUser.save();
-    // Enviar resposta de "usuário criado com sucesso"
+    // Enviar resposta de "Compra realizada com sucesso"
     res.status(201).send({
       statusCode: 201,
       // data: {
@@ -118,7 +117,7 @@ const buyArt = async (req, res) => {
     console.error(e);
     res.status(500).send({
       statusCode: 500,
-      message: "Não foi possível buscar obra e artista",
+      message: "Não foi possível realizar a compra",
     });
   }
 };
