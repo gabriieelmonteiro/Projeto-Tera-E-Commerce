@@ -5,7 +5,7 @@ import controllers from "../controllers/artsControllers.js";
 
 artsRoutes.get("/", controllers.getAllArts);
 artsRoutes.post("/", controllers.createArt);
-artsRoutes.patch("/:id", controllers.updateArt);
-artsRoutes.delete("/:id", controllers.deleteArt);
+artsRoutes.patch("/:artid", controllers.updateArt);
+artsRoutes.delete("/:artid", controllers.deleteArt);
 
 export default artsRoutes;

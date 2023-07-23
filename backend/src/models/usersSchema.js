@@ -22,6 +22,10 @@ const usersSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    collectanea: {
+      // Coleção de obras do usuário. Será um array de objetos que irá receber as obras e suas características
+      type: Array,
+    },
   },
   { timestamps: true }
 );

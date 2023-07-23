@@ -1,4 +1,5 @@
 import bcrypt from "bcrypt";
+import ArtsSchema from "../models/artsSchema.js";
 import UsersSchema from "../models/usersSchema.js";
 
 // O CRUD (Create, Read, Update, Delete) será montado neste arquivo: userControllers
@@ -57,7 +58,7 @@ const createUser = async (req, res) => {
 const updateUser = async (req, res) => {
   try {
     const updatedUser = await UsersSchema.findByIdAndUpdate(
-      req.params.id,
+      req.params.userid,
       req.body
     );
     // enviar a resposta
@@ -76,7 +77,7 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
   try {
     // acessar id e deletar o registro
-    await UsersSchema.findByIdAndDelete(req.params.id);
+    await UsersSchema.findByIdAndDelete(req.params.userid);
     // enviar a resposta
     res.status(200).send({
       message: "Usuário deletado com sucesso",
@@ -88,9 +89,44 @@ const deleteUser = async (req, res) => {
   }
 };
 
+// POST Art em users.collection (coleção de obras do usuário) buyArt = ... POST
+
+const buyArt = async (req, res) => {
+  // Ler a quantidade de compra que vem do frontend
+  // Confrontar a quantidade de compra com a quantidade em estoque
+  // Subtrair o valor no Schema da Art, no estoque (propriedade "quantity")
+  // Pegar e Adicionar um "clone" da arte, com seu Schema (e seus dados) na Array da Coleção do Usuário
+
+  try {
+    // Acessar o ID do usuário que já está logado
+    // Acessar o ID da obra que está sendo adquirida
+    const currentUser = await UsersSchema.findById(req.params.userId);
+    const currentArt = await ArtsSchema.findById(req.params.artId);
+    console.log(currentUser);
+    console.log(currentArt);
+
+    // Salva esse usuário
+    //const savedUser = await newUser.save();
+    // Enviar resposta de "usuário criado com sucesso"
+    res.status(201).send({
+      statusCode: 201,
+      // data: {
+      //   savedUser,
+      // },
+    });
+  } catch (e) {
+    console.error(e);
+    res.status(500).send({
+      statusCode: 500,
+      message: "Não foi possível buscar obra e artista",
+    });
+  }
+};
+
 export default {
   getAllUsers,
   createUser,
   updateUser,
   deleteUser,
+  buyArt,
 };

@@ -52,7 +52,7 @@ const createArt = async (req, res) => {
 const updateArt = async (req, res) => {
   try {
     const updatedArt = await ArtsSchema.findByIdAndUpdate(
-      req.params.id,
+      req.params.artid,
       req.body
     );
     // enviar a resposta
@@ -71,7 +71,7 @@ const updateArt = async (req, res) => {
 const deleteArt = async (req, res) => {
   try {
     // acessar id e deletar o registro
-    await ArtsSchema.findByIdAndDelete(req.params.id);
+    await ArtsSchema.findByIdAndDelete(req.params.artid);
     // enviar a resposta
     res.status(200).send({
       message: "Arte deletada com sucesso",
@@ -82,8 +82,6 @@ const deleteArt = async (req, res) => {
     console.error(error);
   }
 };
-
-// const buyArt = ... POST
 
 export default {
   getAllArts,
