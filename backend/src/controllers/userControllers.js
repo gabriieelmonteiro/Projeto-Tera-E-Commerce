@@ -97,22 +97,34 @@ const buyArt = async (req, res) => {
     // Acessar o ID da obra que está sendo adquirida
     const currentUser = await UsersSchema.findById(req.params.userId);
     const currentArt = await ArtsSchema.findById(req.params.artId);
-    console.log(currentUser.collectanea);
-    console.log(currentArt.name);
-    // Ler a quantidade de compra que vem do frontend
-    // const acquisitionQuantity = 1;
-    // // // Confrontar a quantidade de compra com a quantidade em estoque
-    // // // Subtrair o valor no Schema da Art, no estoque (propriedade "quantity")
-    // currentArt.quantity = currentArt.quantity - acquisitionQuantity;
-    // // // Pegar e Adicionar um "clone" da arte, com seu Schema (e seus dados) na Array da Coleção do Usuário
-    // currentUser.collectanea.append(currentArt);
+
+    // Copia a Art atual para como uma purchasedArt
+    let purchasedArt = JSON.parse(JSON.stringify(currentArt));
+
+    // Chama a coletânea inteira do User
+    const userCollectanea = currentUser.collectanea;
+    // Adiciona um "clone" da arte (purchasedArt), com seu Schema (alterando o dado da quantidade, igual a 1) na Array da Coleção do Usuário
+    purchasedArt.quantity = 1;
+    userCollectanea.push(purchasedArt);
+    currentUser.collectanea = userCollectanea;
+
+    // Subtrai o valor no Schema da Art, no estoque (propriedade "quantity") por 1
+    currentArt.quantity = currentArt.quantity - 1;
+
+    // Atualizar a Arte no banco de dados
+    await currentArt.save();
+
+    //Atualizar o banco de dados do User
+    await currentUser.save();
 
     // Enviar resposta de "Compra realizada com sucesso"
     res.status(201).send({
       statusCode: 201,
-      // data: {
-      //   savedUser,
-      // },
+      data: {
+        currentArt,
+        currentUser,
+        purchasedArt,
+      },
     });
   } catch (e) {
     console.error(e);
