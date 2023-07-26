@@ -89,8 +89,7 @@ const deleteUser = async (req, res) => {
   }
 };
 
-// POST Art em users.collection (coleção de obras do usuário) buyArt = ... POST
-
+// POST Art em users.collectanea (coleção de obras do usuário) buyArt = ... POST
 const buyArt = async (req, res) => {
   try {
     // Acessar o ID do usuário que já está logado
