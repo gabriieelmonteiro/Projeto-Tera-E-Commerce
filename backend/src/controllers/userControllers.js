@@ -157,6 +157,30 @@ const getUserArt = async (req, res) => {
   }
 };
 
+const loginUser = async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    // Procurar o usuário no banco de dados
+    const user = await users.findOne({ username }); //  De onde puxar o "users"? É uma Collection do DB
+    // Verificar se o usuário foi encontrado
+    if (!user) {
+      return res.status(401).json({ message: "Credenciais inválidas" });
+    } // Verificar a senha
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: "Credenciais inválidas" });
+    }
+    res.status(200).json({ message: "Login bem-sucedido" });
+  } catch (e) {
+    console.error(e);
+    res.status(500).send({
+      statusCode: 500,
+      message:
+        "Não foi possível fazer o login. Username ou Password incorretos",
+    });
+  }
+};
+
 export default {
   getAllUsers,
   createUser,
@@ -164,4 +188,5 @@ export default {
   deleteUser,
   buyArt,
   getUserArt,
+  loginUser,
 };
