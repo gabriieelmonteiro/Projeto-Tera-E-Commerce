@@ -8,5 +8,6 @@ usersRoutes.post("/", controllers.createUser);
 usersRoutes.patch("/:userid", controllers.updateUser);
 usersRoutes.delete("/:userid", controllers.deleteUser);
 usersRoutes.post("/:userId/comprar/:artId", controllers.buyArt);
+usersRoutes.get("/:userId/arts", controllers.getUserArt);
 
 export default usersRoutes;

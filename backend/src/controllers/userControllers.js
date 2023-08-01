@@ -134,10 +134,34 @@ const buyArt = async (req, res) => {
   }
 };
 
+// GET arts da coleção {collectanea} do usuário
+const getUserArt = async (req, res) => {
+  try {
+    // Encontra o usuário pelo ID
+    const currentUser = await UsersSchema.findById(req.params.userId);
+    // Encontra a colectanea do usuário
+    const userCollectanea = currentUser.collectanea;
+    // Mostra a coletanea do usuário
+    res.status(200).send({
+      status: 200,
+      data: {
+        userCollectanea,
+      },
+    });
+  } catch (e) {
+    console.error(e);
+    res.status(500).send({
+      statusCode: 500,
+      message: "Não foi possível encontrar coleção do usuário",
+    });
+  }
+};
+
 export default {
   getAllUsers,
   createUser,
   updateUser,
   deleteUser,
   buyArt,
+  getUserArt,
 };
