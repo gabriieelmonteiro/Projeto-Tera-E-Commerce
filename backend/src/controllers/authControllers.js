@@ -1,4 +1,4 @@
-import usersSchema from "../models/usersSchema";
+import usersSchema from "../models/usersSchema.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import * as dotenv from "dotenv";
@@ -9,7 +9,7 @@ const SECRET = process.env.SECRET;
 
 const login = (req, res) => {
   try {
-    usersSchema.findOne({ email: req.body.email }, (e, user) => {
+    usersSchema.findOne({ email: req.body.email }).then((user) => {
       if (!user) {
         return res.status(401).json({
           statusCode: 401,
@@ -26,7 +26,7 @@ const login = (req, res) => {
       );
 
       if (!passwordValidation) {
-        return res.status().json({
+        return res.status(401).json({
           statusCode: 401,
           message: "Usuário não autorizado",
         });
@@ -34,7 +34,7 @@ const login = (req, res) => {
 
       const token = jwt.sign({ name: user.name }, SECRET);
 
-      res.status().json({
+      res.status(200).json({
         statusCode: 200,
         message: "Login realizado com sucesso",
         data: {
