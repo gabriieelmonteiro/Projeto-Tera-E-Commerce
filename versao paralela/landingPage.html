@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <script defer src="index.js"></script>
+  </head>
+
+  <body>
+    <!-- Seção Header barra de navegação -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid d-flex flex-row justify-content-between">
+        <!-- LOGO -->
+        <div>
+          <a class="nav-link navbar-brand logo w-auto h-auto" href="index.html"
+            >GGAF</a
+          >
+        </div>
+
+        <!-- L&G, Categorias <dropdown> e Quem somos -->
+        <div class="collapse navbar-collapse">
+          <div>
+            <a class="nav-link active" href="log&cad.html">Login & Cadastro</a>
+          </div>
+
+          <div class="dropdown show">
+            <a
+              class="nav-link dropdown-toggle active"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Categorias
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Ilustração Digital</a>
+              <a class="dropdown-item" href="#">Animação 3D</a>
+              <a class="dropdown-item" href="#">Pintura e Gravura Digital</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- botao c/ dropdown: perfil, favoritos e minhas coleções -->
+        <div class="dropdown show">
+          <a
+            class="nav-link dropdown-toggle active"
+            href="#"
+            role="button"
+            id="dropdownMenuLink"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img src="img/Usuário.svg" alt="Usuário" class="" />
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Perfil Digital</a>
+            <a class="dropdown-item" href="#">Favoritos</a>
+            <a class="dropdown-item" href="#">Minhas Coleções</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- apresentação e leads -->
+    <div class="d-flex justify-content-evenly align-items-center">
+      <div class="">
+        <h1 class="h1">
+          Nós estamos aqui para te proporcionar a melhor experiência em compra e
+          venda de obras de arte, seja muito bem-vindo e tenha uma ótima
+          apreciação.
+        </h1>
+      </div>
+
+      <div class="">
+        <form class="form-inline" role="form">
+          <div class="form-row">
+            <h6>Preencha o formulário para receber atualizações</h6>
+
+            <div class="form-group col-md-12">
+              <label for="inputName4">Nome</label>
+              <input
+                type="name"
+                class="form-control"
+                id="inputName"
+                placeholder="Escreva seu nome"
+              />
+            </div>
+
+            <div class="form-group col-md-12">
+              <label for="inputEmail4">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail"
+                placeholder="Escreva seu email"
+              />
+            </div>
+
+            <div class="form-group col-md-12">
+              <label for="inputPhone4">WhatsApp</label>
+              <input
+                type="number"
+                class="form-control"
+                id="inputPhone"
+                placeholder="Escreva seu número"
+              />
+            </div>
+
+            <div class="form-group col-md-12">
+              <label>Principal interesse</label>
+              <select
+                class="form-select form-select-sm"
+                aria-label=".form-select-sm example"
+              >
+                <option disabled selected>Selecione</option>
+                <option value="purchaser">Comprar</option>
+                <option value="artist">Expor</option>
+                <option value="both">Explorar as Possibilidades</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- textos e imagens -->
+    <div class="d-flex">
+      <div class="d-block p-2 align-items-center justify-content-around">
+        <h2 class="h2">
+          Quem Somos: Nosso site foi criado para permitir que artistas possam
+          expor e vender suas obras de forma simplificada, intuitiva e
+          personalizada.
+          <small class="text-muted"
+            >Auxiliando aos compradores e colecionadores a ter um contato direto
+            com as obras e seus vendedores com conforto, praticidade e
+            principalmente privacidade.</small
+          >
+        </h2>
+        <!-- <div id="" class=""></div> -->
+        <img
+          width="70%vp"
+          class="img-fluid rounded float-end"
+          src="img/Leao.png"
+          alt="Leao marinho branco com colar de perolas, com uma perola na boca "
+        />
+      </div>
+
+      <div class="d-block p-2 align-items-center justify-content-around">
+        <h2 class="h2">
+          Nosso objetivo: Nosso intuito é valorizar a sua visão como artista,
+          fazendo uma curadoria que transmita ao comprador toda a expressividade
+          de sua obra.
+          <small class="text-muted img-left"
+            >Além da privacidade e praticidade para comprar suas obras
+            priorizamos uma experiência confortável e de confiança. Geramos
+            autonomia para artistas e compradores.</small
+          >
+        </h2>
+        <!-- <div id="" class=""></div> -->
+        <img
+          width="70%vp"
+          class="img-fluid rounded float-start"
+          src="img/sopa.png"
+          alt="Uma tigela de sopa com um portal para outro universo"
+        />
+      </div>
+    </div>
+
+    <div
+      class="d-flex flex-column flex-sm-row justify-content-between border-top h-25"
+    >
+      <p>© 2023 GGAF Inc. All rights reserved.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
