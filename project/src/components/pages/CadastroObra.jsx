@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-export default function LandingPage() {
+export default function CadastroObra() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
+  const [artist, setArtist] = useState("");
+  const [quantity, setQuantity] = useState("");
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -16,6 +18,8 @@ export default function LandingPage() {
       setName("");
       setPrice("");
       setImage("");
+      setArtist("");
+      setQuantity("");
     });
   };
 
@@ -64,6 +68,26 @@ export default function LandingPage() {
               image="image"
               value={image}
               onChange={(event) => setImage(event.target.value)}
+            />
+          </div>
+          <div className="create-post__form-image">
+            <label htmlFor="image">Quantidade</label>
+            <input
+              type="number"
+              id="quantity"
+              image="quantity"
+              value={quantity}
+              onChange={(event) => setQuantity(event.target.value)}
+            />
+          </div>
+          <div className="create-post__form-artista">
+            <label htmlFor="image">Artista</label>
+            <input
+              type="text"
+              id="artist"
+              image="artista"
+              value={artist}
+              onChange={(event) => setArtist(event.target.value)}
             />
           </div>
 

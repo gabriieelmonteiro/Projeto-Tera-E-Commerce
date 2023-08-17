@@ -5,10 +5,9 @@ export default function Home() {
   const [arts, setArts] = useState([]);
 
   const getApiData = async () => {
-    const response = await fetch("http://localhost:8080/arts/").then(
+    const response = await fetch("https://artsapi.onrender.com/arts/").then(
       (response) => response.json()
     );
-    console.log(response);
     setArts(response.data.arts);
   };
 
