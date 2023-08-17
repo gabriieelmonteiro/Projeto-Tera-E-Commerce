@@ -1,120 +1,77 @@
-import React from "react";
-
-import leao from "../../img/Leao.png";
-import sopa from "../../img/sopa.png";
-
-import Default from "../templates/Default";
+import React, { useState } from "react";
 
 export default function LandingPage() {
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [image, setImage] = useState("");
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+    fetch("https://artsapi.onrender.com/arts/", {
+      method: "POST",
+      body: JSON.stringify({ name, image, price }),
+      headers: { "Content-type": "application/json" },
+    }).then(() => {
+      setName("");
+      setPrice("");
+      setImage("");
+    });
+  };
+
   return (
-    <div>
-      <Default>
-        <div className="d-flex justify-content-evenly align-items-center">
-          <div className="">
-            <h1 className="h1">
-              Nós estamos aqui para te proporcionar a melhor experiência em
-              compra e venda de obras de arte, seja muito bem-vindo e tenha uma
-              ótima apreciação.
-            </h1>
-          </div>
+    <div className="wrapper">
+      <div className="app-header">
+        <div className="app-header__logo">
+          <img src="images/logo.svg" className="responsive" alt="" />
+        </div>
+        <div className="app-header__menu">
+          <i className="fa fa-bars"></i>
+        </div>
+      </div>
 
-          <div className="">
-            <form className="form-inline">
-              <div className="form-row">
-                <h6>Preencha o formulário para receber atualizações</h6>
+      <div className="create-post">
+        <h1>Criar</h1>
 
-                <div className="form-group col-md-12">
-                  <label htmlFor="inputName4">Nome</label>
-                  <input
-                    type="name"
-                    className="form-control"
-                    id="inputName"
-                    placeholder="Escreva seu nome"
-                  />
-                </div>
-
-                <div className="form-group col-md-12">
-                  <label htmlFor="inputEmail4">Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="inputEmail"
-                    placeholder="Escreva seu email"
-                  />
-                </div>
-
-                <div className="form-group col-md-12">
-                  <label htmlFor="inputPhone4">WhatsApp</label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="inputPhone"
-                    placeholder="Escreva seu número"
-                  />
-                </div>
-
-                <div className="form-group col-md-12">
-                  <label>Principal interesse</label>
-                  <select
-                    className="form-select form-select-sm"
-                    aria-label=".form-select-sm example"
-                  >
-                    <option disabled selected>
-                      Selecione
-                    </option>
-                    <option value="purchaser">Comprar</option>
-                    <option value="artist">Expor</option>
-                    <option value="both">Explorar as Possibilidades</option>
-                  </select>
-                </div>
-
-                <button className="btn btn-primary">Enviar</button>
-              </div>
-            </form>
-          </div>
-          <div className="d-flex">
-            <div className="d-block p-2 align-items-center justify-content-around">
-              <h2 className="h2">
-                Quem Somos: Nosso site foi criado para permitir que artistas
-                possam expor e vender suas obras de forma simplificada,
-                intuitiva e personalizada.
-                <small className="text-muted">
-                  Auxiliando aos compradores e colecionadores a ter um contato
-                  direto com as obras e seus vendedores com conforto,
-                  praticidade e principalmente privacidade.
-                </small>
-              </h2>
-              <img
-                width="70%vp"
-                className="img-fluid rounded float-end"
-                src={leao}
-                alt="Leao marinho branco com colar de perolas, com uma perola na boca "
-              />
-            </div>
-          </div>
-          <div className="d-block p-2 align-items-center justify-content-around">
-            <h2 className="h2">
-              Nosso objetivo: Nosso intuito é valorizar a sua visão como
-              artista, fazendo uma curadoria que transmita ao comprador toda a
-              expressividade de sua obra.
-              <small className="text-muted img-left">
-                Além da privacidade e praticidade para comprar suas obras
-                priorizamos uma experiência confortável e de confiança. Geramos
-                autonomia para artistas e compradores.
-              </small>
-            </h2>
-            <img
-              width="70%vp"
-              className="img-fluid rounded float-start"
-              src={sopa}
-              alt="Uma tigela de sopa com um portal para outro universo"
+        <form onSubmit={handleFormSubmit} className="create-post__form">
+          <div className="create-post__form-name">
+            <label htmlfor="name">Título</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
             />
           </div>
-          <div className="d-flex flex-column flex-sm-row justify-content-between border-top h-25">
-            <p>© 2023 GGAF Inc. All rights reserved.</p>
+
+          <div className="create-post__form-price">
+            <label htmlFor="price">Preço</label>
+            <input
+              type="number"
+              id="price"
+              name="price"
+              value={price}
+              onChange={(event) => setPrice(event.target.value)}
+            />
           </div>
-        </div>
-      </Default>
+
+          <div className="create-post__form-image">
+            <label htmlFor="image">Url da imagem</label>
+            <input
+              type="text"
+              id="image"
+              image="image"
+              value={image}
+              onChange={(event) => setImage(event.target.value)}
+            />
+          </div>
+
+          <button className="button-primary">Salvar</button>
+        </form>
+      </div>
+
+      <div className="app-footer">Módulo React :: Full Stack Development</div>
     </div>
   );
 }

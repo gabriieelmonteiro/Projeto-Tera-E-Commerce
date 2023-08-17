@@ -16,9 +16,9 @@ function App() {
     <BrowserRouter>
     <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/login/" element={<Login />} />
-    <Route path="/landing" element={<LandingPage />} />
-    <Route path="/login/:Id/post" element={<ObrasUser />} />
+    <Route path="/Id/" element={<Login />} />
+    <Route path="/Id/:IdUser/post" element={<LandingPage />} />
+    <Route path="/Id/:IdUser/arts" element={<ObrasUser />} />
     <Route path="*" element={<h1>Not Found</h1>} />
     </Routes>
     </BrowserRouter>
