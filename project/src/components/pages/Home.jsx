@@ -37,7 +37,7 @@ export default function Home() {
                     <img src={art.image} className="card-img-top" alt="..." />
                     <div className="card-body">
                       <div className="card-title text-center">
-                        Título da Obra: {art.name}
+                      {art.name}
                       </div>
                       <div className="card-text text-center">{art.artist}</div>
                       <div className="card-text text-center">
