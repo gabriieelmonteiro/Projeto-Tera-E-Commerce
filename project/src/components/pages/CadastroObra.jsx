@@ -12,7 +12,7 @@ export default function CadastroObra() {
 
     fetch("https://artsapi.onrender.com/arts/", {
       method: "POST",
-      body: JSON.stringify({ name, image, price }),
+      body: JSON.stringify({ name, image, price, artist, quantity }),
       headers: { "Content-type": "application/json" },
     }).then(() => {
       setName("");
@@ -35,11 +35,11 @@ export default function CadastroObra() {
       </div>
 
       <div className="create-post">
-        <h1>Criar</h1>
+        <h1>Cadastrar Obra</h1>
 
         <form onSubmit={handleFormSubmit} className="create-post__form">
           <div className="create-post__form-name">
-            <label htmlfor="name">Título</label>
+            <label htmlFor="name">Título</label>
             <input
               type="text"
               id="name"
@@ -91,11 +91,11 @@ export default function CadastroObra() {
             />
           </div>
 
-          <button className="button-primary">Salvar</button>
+          <button className="button-primary">Upload</button>
         </form>
       </div>
 
-      <div className="app-footer">Módulo React :: Full Stack Development</div>
+      <div className="app-footer">© 2023 GGAF Inc. All rights reserved.</div>
     </div>
   );
 }

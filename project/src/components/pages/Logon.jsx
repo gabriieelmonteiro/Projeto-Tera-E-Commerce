@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import logo from "../../img/logo.jpg";
 
-export default function Login() {
+export default function Logon() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -57,10 +57,7 @@ export default function Login() {
               onChange={(event) => setPassword(event.target.value)}
             />
           </div>
-
-          <button type="button" class="btn btn-primary">
-            Cadastrar
-          </button>
+          <button class="button-primary">Cadastrar</button>
         </form>
       </div>
     </div>
