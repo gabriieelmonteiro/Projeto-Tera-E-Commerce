@@ -27,7 +27,7 @@ export default function Home() {
         />
       </section>
       <section className="obras__recentes mt-3">
-        <h2 className="mb-3 mx-4">Novos lançamentos</h2>
+        <h2 className="mb-3 mx-4">Todas as Obras</h2>
         <div className="row mx-4 ">
           <div className="app">
             {arts &&
