@@ -36,9 +36,13 @@ export default function Home() {
                   <div className="card mx-3">
                     <img src={art.image} className="card-img-top" alt="..." />
                     <div className="card-body">
-                      <div className="card-title">Name:{art.name}</div>
+                      <div className="card-title text-center">
+                        Título da Obra: {art.name}
+                      </div>
                       <div className="card-text text-center">{art.artist}</div>
-                      <div className="card-text text-center">{art.price}</div>
+                      <div className="card-text text-center">
+                        R$ {art.price}
+                      </div>
                     </div>
                   </div>
                 </div>
